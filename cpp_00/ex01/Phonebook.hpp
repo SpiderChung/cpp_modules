@@ -6,7 +6,7 @@
 /*   By: schung <schung@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 01:13:13 by schung            #+#    #+#             */
-/*   Updated: 2022/10/14 02:08:39 by schung           ###   ########.fr       */
+/*   Updated: 2022/10/15 00:42:14 by schung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ class PhoneBook
 {
 public:
 		PhoneBook();
-		void	addContact();
-		void	getMain();
-		void	searchContact() const;
 		~PhoneBook();
-
+		void	addContact();
+		void	getHint();
+		void	searchContact() const;
+	
 private:
 		Contact contact[8];
 		int		number;
 		void	showContacts() const;
-		void	numContacts() const;
-		void	viewFullInfo(Contact contact) const;
+		void	numContact() const;
+		void	showContactInfo(Contact contact) const;
 };
 
 #endif

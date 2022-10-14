@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: schung <schung@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/11 23:55:57 by schung            #+#    #+#              #
-#    Updated: 2022/10/11 23:56:41 by schung           ###   ########.fr        #
+#    Created: 2022/10/14 23:41:26 by schung            #+#    #+#              #
+#    Updated: 2022/10/15 00:44:55 by schung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-SRC = Phonebook.cpp
+SRC = Contact.hpp Contact.cpp Main.cpp PhoneBook.hpp PhoneBook.cpp
 
 CC = c++
 
@@ -21,7 +21,7 @@ FLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 all: $(NAME)
 
 $(NAME): $(SRC)
-	$(CC) $(FLAGS) $(SRC) -o $(NAME)
+	$(CC) $(FLAGS) $(SRC)
 	
 clean:
 	rm -rf $(NAME)
