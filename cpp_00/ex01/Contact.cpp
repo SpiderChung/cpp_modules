@@ -55,7 +55,6 @@ void	Contact::setData(void)
 	std::getline(std::cin, str);
 	setFirstName(str);
 
-
 	std::cout << "Please enter Last Name:" << std::endl;
 	std::getline(std::cin, str);
 	setLastName(str);
@@ -72,8 +71,10 @@ void	Contact::setData(void)
 	std::getline(std::cin, str);
 	setDarkestSecret(str);
 
-	std::cout << "The new Contact is created!" << std::endl;
-
+    if (!this->isEmpty())
+    {
+        std::cout << "The new Contact is created!" << std::endl;
+    }
 }
 
 bool	Contact::isEmpty(void)

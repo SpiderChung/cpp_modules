@@ -62,12 +62,12 @@ void PhoneBook::getHint(void)
 
 void PhoneBook::showContacts() const
 {
-	std::cout << "+--------------------------------------+\n";
-	std::cout << "|Index| FirstName| LastName | NickName |\n";
-	std::cout << "+--------------------------------------+\n";
+	std::cout << "+-------------------------------------------+\n";
+	std::cout << "|   Index  | FirstName| LastName | NickName |\n";
+	std::cout << "+-------------------------------------------+\n";
 	for (int i = 0; i < this->number; i++)
 	{
-		std::cout <<"|"<< std::setw(5) << i + 1 << "|";
+		std::cout <<"|"<< std::setw(10) << i + 1 << "|";
 		if (this->contact[i].getFirstName().length() > 10)
 		{
 			std::cout << this->contact[i].getFirstName().substr(0, 9) << ".|";
@@ -94,7 +94,7 @@ void PhoneBook::showContacts() const
 		}
 		std::cout << "\n";
 	}
-	std::cout << "+--------------------------------------+\n";
+	std::cout << "+-------------------------------------------+\n";
 }
 
 void PhoneBook::showContactInfo(Contact contact) const
