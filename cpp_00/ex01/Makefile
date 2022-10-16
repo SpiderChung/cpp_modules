@@ -12,7 +12,7 @@
 
 NAME = phonebook
 
-SRC = Contact.hpp Contact.cpp Main.cpp PhoneBook.hpp PhoneBook.cpp
+SRC = ${shell find . -name "*.cpp"}
 
 CC = c++
 
@@ -21,7 +21,7 @@ FLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 all: $(NAME)
 
 $(NAME): $(SRC)
-	$(CC) $(FLAGS) $(SRC)
+	$(CC) $(FLAGS) $(SRC) -o $(NAME)
 	
 clean:
 	rm -rf $(NAME)

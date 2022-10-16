@@ -99,11 +99,11 @@ void PhoneBook::showContacts() const
 
 void PhoneBook::showContactInfo(Contact contact) const
 {
-	std::cout << "|" << "FirstName:       |" << std::setw(10) << contact.getFirstName() << "|\n";
-	std::cout << "|" << "LastName:        |" << std::setw(10) << contact.getLastName() << "|\n";
-	std::cout << "|" << "NickName:        |" << std::setw(10) << contact.getNickname() << "|\n";
-	std::cout << "|" << "Phone Number:    |" << std::setw(10) << contact.getPhoneNumber() << "|\n";
-	std::cout << "|" << "Darkest Secret:  |" << std::setw(10) << contact.getDarkestSecret() << "|\n";
+	std::cout << "|" << "FirstName:       | " << contact.getFirstName() << std::endl;
+	std::cout << "|" << "LastName:        | " << contact.getLastName() << std::endl;
+	std::cout << "|" << "NickName:        | " << contact.getNickname() << std::endl;
+	std::cout << "|" << "Phone Number:    | " << contact.getPhoneNumber() << std::endl;
+	std::cout << "|" << "Darkest Secret:  | " << contact.getDarkestSecret() << std::endl;
 }
 
 void	PhoneBook::searchContact() const
