@@ -42,6 +42,6 @@ void Account::_displayTimestamp()
               << std::setw(2) << ptr->tm_mday << "_"
               << std::setw(2) << ptr->tm_hour
               << std::setw(2) << ptr->tm_min
-              << std::setw(2) << ptr->tm_sec << "]";
+              << std::setw(2) << ptr->tm_sec << "]_";
 }
 
