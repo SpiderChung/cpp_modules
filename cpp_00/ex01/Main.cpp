@@ -18,7 +18,6 @@ int main(void)
 	PhoneBook 	PhoneBook;
 	std::string str;
 
-	
 	while(true)
 	{
 		std::cout << "Enter command:" << std::endl;
