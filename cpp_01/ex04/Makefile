@@ -1,8 +1,8 @@
-NAME		=	BraiiiiiiinnnzzzZ
+NAME		=	Sed_is_for_losers
 
 CC			=	c++
 
-HEADER		= 	Zombie.hpp
+HEADER		= 	${shell find . -name "*.hpp"}
 
 FLAGS		=	-Wall -Werror -Wextra -std=c++98 -pedantic
 

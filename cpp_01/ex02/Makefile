@@ -1,8 +1,6 @@
-NAME		=	BraiiiiiiinnnzzzZ
+NAME		=	 HI_THIS_IS_BRAIN
 
 CC			=	c++
-
-HEADER		= 	Zombie.hpp
 
 FLAGS		=	-Wall -Werror -Wextra -std=c++98 -pedantic
 
@@ -14,7 +12,7 @@ OBJ_FILES	=	$(patsubst %.cpp,%.o, $(notdir $(SRC)))
 
 OBJ			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
 
-$(OBJ_DIR)%.o: %.cpp Makefile $(HEADER)
+$(OBJ_DIR)%.o: %.cpp Makefile
 	@mkdir -p $(OBJ_DIR)
 	@echo "$(YELLOW)Compiling [$@]...$(RESET)"
 	@$(CC) $(FLAGS) -o $@ -c $<
