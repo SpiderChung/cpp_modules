@@ -1,4 +1,4 @@
-#include "Replace.h"
+#include "Replace.hpp"
 
 Replace::Replace(std::string filename, std::string str1, std::string str2)
 {
