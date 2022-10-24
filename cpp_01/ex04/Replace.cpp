@@ -12,6 +12,19 @@ Replace::~Replace()
 
 }
 
+void Replace::check_in(std::string &str)
+{
+    int i;
+
+    i = str.find(str1);
+    while(i != -1)
+    {
+        str.erase(i, str1.length());
+        str.insert(i, str2);
+        i = str.find(str1);
+    }
+}
+
 void Replace::replace()
 {
     std::ifstream    inputStream;
@@ -19,7 +32,7 @@ void Replace::replace()
     std::ofstream   outputStream;
     std::string     str;
 
-    if(this->filename.length() == 0 || this->str1.length()
+    if(this->filename.length() == 0 || this->str1.length() == 0
         || this->str2.length() == 0)
     {
         std::cout << "Error: bad arguments" << std::endl;
@@ -39,7 +52,7 @@ void Replace::replace()
         exit(EXIT_FAILURE);
     }
     inputStream.seekg(0, std::ios::beg);
-    outFile = "result.replace";
+    outFile = filename + ".replace";
     outputStream.open(outFile);
     if(!outputStream.is_open())
     {
@@ -49,7 +62,8 @@ void Replace::replace()
     }
     while(std::getline(inputStream, str))
     {
-        outputStream << str << "\n"
+        check_in(str);
+        outputStream << str << std::endl;
     }
     inputStream.close();
     outputStream.close();
