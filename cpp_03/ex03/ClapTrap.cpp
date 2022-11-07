@@ -3,13 +3,13 @@
 ClapTrap::ClapTrap(std::string name): _hit_points(10), _energy(10), _attack(0)
 {
     this->_name = name;
-    std::cout << "Constructor called" << std::endl;
+    std::cout << "Constructor ClapTrap called" << std::endl;
     printInfo();
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor called from " + this->_name << std::endl;
+    std::cout << "Destructor ClapTrap called from " + this->_name << std::endl;
 }
 
 void ClapTrap::printInfo()
@@ -20,7 +20,7 @@ void ClapTrap::printInfo()
 
 ClapTrap::ClapTrap()
 {
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Default ClapTrap constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
