@@ -33,6 +33,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
     std::cout << "Copy assignment operator called" << std::endl;
     this->_hit_points = other.getHP();
+
     this->_attack = other.getAttack();
     this->_energy = other.getEnergy();
     this->_name = other.getName();

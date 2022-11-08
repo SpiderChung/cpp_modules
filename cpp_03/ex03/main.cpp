@@ -6,7 +6,9 @@
 int main()
 {
     DiamondTrap diamondTrap("Diamond");
+    std::cout << "_______" << std::endl;
     ClapTrap clapTrap("Clap");
+    std::cout << "_______" << std::endl;
 
     diamondTrap.whoAmI();
     diamondTrap.attack(clapTrap.getName());
