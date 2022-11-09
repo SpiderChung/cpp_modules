@@ -44,11 +44,12 @@ void Brain::setIdea(std::string idea) {
 void Brain::printInfo() {
     int count = 0;
     for (int i = 0; i < 100; i++) {
-        if (this->_ideas[i].size() != 0)
+        if (this->_ideas[i].size() != 0) {
             std::cout << _ideas[i] << std::endl;
-            count++;
+            count = 1;
+        }
     }
     if (count == 0) {
-        std::cout << "There is no ideas" << std::endl;
+        std::cout << "There are no ideas" << std::endl;
     }
 }

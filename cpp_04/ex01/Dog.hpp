@@ -17,8 +17,8 @@ public:
     Dog &operator=(const Dog dog);
     Dog(const Dog &dog);
     virtual void makeSound() const;
-    void setIdea(std::string idea);
-    void printInfo();
+    virtual void setIdea(std::string idea);
+    virtual void printInfo();
 
 };
 

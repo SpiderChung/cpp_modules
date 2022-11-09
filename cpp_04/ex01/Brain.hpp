@@ -7,7 +7,7 @@
 
 #include "Animal.hpp"
 
-class Brain : public Animal {
+class Brain {
 public:
     Brain();
     ~Brain();

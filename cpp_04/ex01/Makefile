@@ -4,7 +4,7 @@ CC			=	c++
 
 HEADER		= 	${shell find . -name "*.hpp"}
 
-FLAGS		=	-Wall -Werror -Wextra -std=c++98 -pedantic
+FLAGS		=	-Wall -Werror -Wextra -std=c++98 -pedantic -g
 
 OBJ_DIR		=	obj/
 

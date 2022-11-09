@@ -13,12 +13,12 @@ private:
     Brain *brain;
 public:
     Cat();
-    virtual ~Cat();
+    ~Cat();
     Cat &operator=(const Cat cat);
     Cat(const Cat &cat);
     virtual void makeSound() const;
-    void setIdea(std::string idea);
-    void printInfo();
+    virtual void setIdea(std::string idea);
+    virtual void printInfo();
 };
 
 
