@@ -7,7 +7,7 @@
 
 #include "Animal.hpp"
 
-class Brain {
+class Brain : public Animal {
 public:
     Brain();
     ~Brain();
@@ -15,8 +15,6 @@ public:
     Brain &operator=(const Brain brain);
     void setIdea(std::string idea);
     void printInfo();
-
-
 
 private:
     std::string _ideas[100];

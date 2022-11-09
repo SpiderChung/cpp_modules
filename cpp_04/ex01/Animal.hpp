@@ -7,18 +7,20 @@
 
 #include <iostream>
 #include <iomanip>
+#include "string"
 
 class Animal {
+protected:
+    std::string type;
 public:
     Animal();
     virtual ~Animal();
     Animal &operator=(const Animal animal);
     Animal(const Animal &animal);
-    virtual void makeSound() const;
     std::string getType() const;
-
-protected:
-    std::string type;
+    virtual void makeSound() const;
+    virtual void setIdea(std::string idea);
+    virtual void printInfo();
 
 };
 

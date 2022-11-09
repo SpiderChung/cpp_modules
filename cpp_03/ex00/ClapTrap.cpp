@@ -106,5 +106,9 @@ void ClapTrap::attack(const std::string &target)
     }
 }
 
+void ClapTrap::setName(const std::string target)
+{
+    this->_name = target;
+}
 
 

@@ -14,7 +14,7 @@ Animal::~Animal() {
 }
 
 Animal &Animal::operator=(const Animal animal) {
-    std::cout << "Animal copy assignment operator called" << std::endl;
+    std::cout << "Animal assignment operator called" << std::endl;
     this->type = animal.type;
     return (*this);
 }
@@ -31,3 +31,8 @@ void Animal::makeSound() const {
 std::string Animal::getType() const {
     return this->type;
 }
+
+void Animal::printInfo() {}
+
+void Animal::setIdea(std::string) {}
+

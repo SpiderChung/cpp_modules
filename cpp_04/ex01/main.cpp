@@ -16,20 +16,19 @@ int main(void) {
         }
         animals[i]->makeSound();
     }
-    animals[0].
-    animals[0]->setIdeas("Hello");
-    animals[0]->setIdeas("World");
-    animals[0]->setIdeas("mmmmm\n");
+    animals[0]->setIdea("Hello");
+    animals[0]->setIdea("World");
+    animals[0]->setIdea("mmmmm\n");
     std::cout << animals[0]->getType() << "\n";
-    animals[0]->showIdeas();
+    animals[0]->printInfo();
     std::cout << "before copying\n";
     std::cout << animals[9]->getType() << "\n";
-    animals[9]->showIdeas();
+    animals[9]->printInfo();
     delete animals[9];
     std::cout << "after copying\n";
     animals[9] = animals[0];
     std::cout << animals[9]->getType() << "\n";
-    animals[9]->showIdeas();
+    animals[9]->printInfo();
     for (int i = 0; i < 9; i++)
         delete animals[i];
     return 0;

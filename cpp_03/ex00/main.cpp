@@ -18,8 +18,12 @@ int main()
     crap.takeDamage(6);
     copy_crap.takeDamage(3);
     crap.attack(copy_crap.getName());
+    copy_crap.setName("Trip");
     crap.printInfo();
     copy_crap.printInfo();
+
+
+
 
     return 0;
 }

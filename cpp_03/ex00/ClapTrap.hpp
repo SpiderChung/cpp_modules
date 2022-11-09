@@ -27,6 +27,8 @@ public:
     unsigned int getEnergy() const;
     unsigned int getAttack() const;
     void printInfo();
+
+    void setName(const std::string target);
 };
 
 
