@@ -16,9 +16,13 @@ public:
     ~Cat();
     Cat &operator=(const Cat cat);
     Cat(const Cat &cat);
-    virtual void makeSound() const;
-    virtual void setIdea(std::string idea);
-    virtual void printInfo();
+    virtual Animal	&operator=( const Animal & origin );
+
+    void makeSound() const;
+    void setIdea(std::string idea);
+    void printInfo();
+    Brain *getBrain(void) const;
+
 };
 
 

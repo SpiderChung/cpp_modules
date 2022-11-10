@@ -23,13 +23,14 @@ Brain::Brain(const Brain &brain) {
     }
 }
 
-Brain &Brain::operator=(const Brain brain) {
+Brain &Brain::operator=(const Brain &brain) {
     std::cout << "Brain assignment operator called" << std::endl;
     if (this != &brain) {
         for (int i = 0; i < 100; i++) {
             this->_ideas[i] = brain._ideas[i];
         }
     }
+    this->_index = brain._index;
     return (*this);
 }
 

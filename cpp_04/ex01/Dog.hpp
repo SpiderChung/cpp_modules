@@ -16,9 +16,12 @@ public:
     ~Dog();
     Dog &operator=(const Dog dog);
     Dog(const Dog &dog);
-    virtual void makeSound() const;
-    virtual void setIdea(std::string idea);
-    virtual void printInfo();
+    virtual Animal	&operator=( const Animal & origin );
+
+    void makeSound() const;
+    void setIdea(std::string idea);
+    void printInfo();
+    Brain *getBrain(void) const;
 
 };
 

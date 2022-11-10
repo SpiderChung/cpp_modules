@@ -32,8 +32,8 @@ Cat &Cat::operator=(const Cat cat) {
 }
 
 Cat::Cat(const Cat &cat) {
-    std::cout << "Cat copy constructor called" << std::endl;
-    *this = cat;
+    std::cout << "Dog copy constructor called" << std::endl;
+    type = cat.type;
 }
 
 void Cat::printInfo() {
@@ -43,3 +43,18 @@ void Cat::printInfo() {
 void Cat::setIdea(std::string idea) {
     this->brain->setIdea(idea);
 }
+
+Brain *Cat::getBrain() const {
+    return (this->brain);
+}
+
+Animal& Cat::operator=(const Animal& origin)
+{
+    if (this == &origin)
+        return (*this);
+    this->type = origin.getType();
+    *(this->brain) = *(origin.getBrain());
+    std::cout << "Animal/Cat assignment constructor" << std::endl;
+    return *this;
+}
+

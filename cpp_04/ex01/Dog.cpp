@@ -33,7 +33,7 @@ Dog &Dog::operator=(const Dog dog) {
 
 Dog::Dog(const Dog &dog) {
     std::cout << "Dog copy constructor called" << std::endl;
-    *this = dog;
+    type = dog.type;
 }
 
 void Dog::setIdea(std::string idea) {
@@ -42,4 +42,17 @@ void Dog::setIdea(std::string idea) {
 
 void Dog::printInfo() {
     this->brain->printInfo();
+}
+
+Animal &Dog::operator=(const Animal &origin) {
+    std::cout << "Animal/Dog assignment operator called" << std::endl;
+    if (this == &origin)
+        return (*this);
+    this->type = origin.getType();
+    *(this->brain) = *(origin.getBrain());
+    return *this;
+}
+
+Brain *Dog::getBrain() const {
+    return (this->brain);
 }
