@@ -2,7 +2,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-int main(void) {
+int main() {
     {
         const Animal* j = new Dog();
         const Animal* i = new Cat();
@@ -41,4 +41,5 @@ int main(void) {
         }
     }
     return 0;
+
 }

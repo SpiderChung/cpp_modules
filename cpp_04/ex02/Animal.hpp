@@ -21,7 +21,7 @@ public:
     Animal &operator=(const Animal &animal);
     Animal(const Animal &animal);
     const std::string getType() const;
-    virtual void makeSound() const;
+    virtual void makeSound() const = 0;
 };
 
 #endif //ANIMAL_HPP

@@ -25,10 +25,6 @@ Animal::Animal(const Animal &animal) {
     type = animal.type;
 }
 
-void Animal::makeSound() const {
-    std::cout << "Animal makes a sound" << std::endl;
-}
-
 const std::string Animal::getType() const {
     return this->type;
 }
