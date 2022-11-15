@@ -11,6 +11,14 @@ int main() {
     A = intern.makeForm("shrubbery creation", "D");
     B = intern.makeForm("robotomy request", "E");
     C = intern.makeForm("presidental pardon", "F");
+
+    std::cout << "---------------------------------" << std::endl;
+    try {
+        Form *X;
+        X = intern.makeForm("filkina gramota", "Filya");
+    } catch (std::exception &e) {
+        std::cout << e.what() << std::endl;
+    }
     std::cout << "---------------------------------" << std::endl;
 
     std::cout << *A << std::endl;
