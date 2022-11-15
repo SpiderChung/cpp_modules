@@ -1,4 +1,6 @@
 #include "Form.hpp"
+#include "../ex02/Form.hpp"
+
 
 Form::Form(const std::string &name, const int signGrade, const int executeGrade) :
     _name(name), _signGrade(signGrade), _executeGrade(executeGrade) {

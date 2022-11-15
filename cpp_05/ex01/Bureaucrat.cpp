@@ -11,9 +11,9 @@ Bureaucrat::~Bureaucrat() {}
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name) {
 
     if (grade > 150)
-        throw Bureaucrat::GradeTooHighException();
-    if (grade < 1)
         throw Bureaucrat::GradeTooLowException();
+    if (grade < 1)
+        throw Bureaucrat::GradeTooHighException();
     this->_grade = grade;
 }
 
@@ -50,15 +50,15 @@ const char *Bureaucrat::GradeTooHighException::what() const throw() {
 }
 
 void Bureaucrat::incrementGrade() {
-    if (_grade == 150)
+    if (_grade == 1)
         throw Bureaucrat::GradeTooHighException();
-    ++_grade;
+    --_grade;
 }
 
 void Bureaucrat::decrementGrade() {
-    if (_grade == 1)
+    if (_grade == 150)
         throw Bureaucrat::GradeTooLowException();
-    --_grade;
+    ++_grade;
 }
 
 void Bureaucrat::signForm(Form &form) {

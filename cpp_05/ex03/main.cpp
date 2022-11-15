@@ -1,13 +1,17 @@
 #include "Bureaucrat.hpp"
-#include "PresidentialPardonForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main() {
     std::cout << "---------------------------------" << std::endl;
-    Form *A = new PresidentialPardonForm("A");
-    Form *B = new RobotomyRequestForm("B");
-    Form *C = new ShrubberyCreationForm("C");
+    Intern intern;
+    Form *A;
+    Form *B;
+    Form *C;
+
+    A = intern.makeForm("shrubbery creation", "D");
+    B = intern.makeForm("robotomy request", "E");
+    C = intern.makeForm("presidental pardon", "F");
+    std::cout << "---------------------------------" << std::endl;
 
     std::cout << *A << std::endl;
     std::cout << *B << std::endl;
@@ -32,6 +36,7 @@ int main() {
     std::cout << "---------------------------------" << std::endl;
     Mike.executeForm(*C);
     std::cout << "---------------------------------" << std::endl;
+
     delete A;
     delete B;
     delete C;
