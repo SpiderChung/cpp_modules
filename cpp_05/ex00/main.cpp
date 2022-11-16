@@ -19,13 +19,13 @@ int main() {
     }
 
     try {
-        one.decrementGrade();
+        one.incrementGrade();
     } catch (std::exception & e) {
         std::cout << e.what() << std::endl;
     }
 
     try {
-        two.incrementGrade();
+        two.decrementGrade();
     } catch (std::exception & e) {
         std::cout << e.what() << std::endl;
     }

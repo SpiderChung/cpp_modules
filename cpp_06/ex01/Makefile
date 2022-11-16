@@ -1,4 +1,4 @@
-NAME		=	Bureaucrat
+NAME		=	convert
 
 CC			=	c++
 
@@ -39,7 +39,6 @@ clean:
 fclean: clean
 	@if [ -f "$(NAME)" ]; then \
 		rm -f $(NAME); \
-		rm -f *_shrubbery; \
 		echo "$(BLUE)Deleting $(NAME) $(RESET)"; else \
 		echo "No Executable to remove"; \
 	fi;

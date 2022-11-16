@@ -5,9 +5,9 @@
 Form::Form(const std::string &name, const int signGrade, const int executeGrade) :
     _name(name), _signGrade(signGrade), _executeGrade(executeGrade) {
     if (signGrade > 150 || executeGrade > 150)
-        throw Form::GradeTooHighException();
-    if (signGrade < 1 || executeGrade < 1)
         throw Form::GradeTooLowException();
+    if (signGrade < 1 || executeGrade < 1)
+        throw Form::GradeTooHighException();
 }
 
 Form::~Form() {}

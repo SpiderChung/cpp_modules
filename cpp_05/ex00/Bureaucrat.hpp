@@ -26,13 +26,12 @@ public:
     public:
         const char * what() const throw();
     };
-
-    friend std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucraft);
-
 private:
     Bureaucrat();
     const std::string _name;
     int _grade;
 };
+
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &bureaucraft);
 
 #endif //BUREAUCRAFT_HPP

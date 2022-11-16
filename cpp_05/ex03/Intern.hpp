@@ -26,5 +26,4 @@ public:
     };
 };
 
-
 #endif //INTERN_HPP

@@ -18,7 +18,8 @@ int main() {
         X = intern.makeForm("filkina gramota", "Filya");
     } catch (std::exception &e) {
         std::cout << e.what() << std::endl;
-    }
+   }
+
     std::cout << "---------------------------------" << std::endl;
 
     std::cout << *A << std::endl;
@@ -44,6 +45,7 @@ int main() {
     std::cout << "---------------------------------" << std::endl;
     Mike.executeForm(*C);
     std::cout << "---------------------------------" << std::endl;
+
 
     delete A;
     delete B;

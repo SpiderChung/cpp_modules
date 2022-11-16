@@ -23,8 +23,6 @@ int main() {
         std::cout << E << std::endl;
         C.signForm(E);
         D.signForm(E);
-        D.signForm(E);
-        std::cout << E << std::endl;
     }
     {
         std::cout << "---------------------------------" << std::endl;
