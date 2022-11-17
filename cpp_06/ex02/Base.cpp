@@ -14,7 +14,7 @@ Base *generate(void) {
             return new A();
         case 1:
             return new B();
-        case 2:
+        default:
             return new C();
     }
 }
