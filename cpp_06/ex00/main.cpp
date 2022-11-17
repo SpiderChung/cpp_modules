@@ -7,7 +7,7 @@
 int main(int argc, char *argv[])
 {
     if (argc != 2) {
-        std::cout << "Wrong arguments" << std::endl;
+        std::cout << "Wrong arguments: need char, int, float or double" << std::endl;
         return 1;
     }
     char *str;
@@ -37,18 +37,17 @@ int main(int argc, char *argv[])
     else
         std::cout << "char: '" << c << "'" << std::endl;
 
-    if (isinf(d) || isnan(d) || d < std::numeric_limits<int>::min()
-                    || d > std::numeric_limits<int>::max())
+    if (isinf(d) || isnan(d) || d < -2147483648 || d > 2147483647)
         std::cout << "int: impossible" << std::endl;
     else
         std::cout << "int: " << i << std::endl;
 
-    if (ld < std::numeric_limits<float>::min() || ld > std::numeric_limits<float>::max())
+    if ((d < -3.40282e+38 || d > 3.40282e+38))
        std::cout << "float: impossible" << std::endl;
     else
         std::cout << "float: " << f << "f" << std::endl;
 
-    if(ld < std::numeric_limits<double>::min() || ld > std::numeric_limits<double>::max())
+    if(ld < -1.79769e+308 || ld > 1.79769e+308)
     std::cout << "double: impossible" << std::endl;
     else
     std::cout << "double: " << d << std::endl;
