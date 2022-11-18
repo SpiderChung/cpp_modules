@@ -14,8 +14,8 @@ void iter(T *array, int arrayLength, void (*function)(T&)) {
     }
 }
 
-template<typename T>
-void print(T& val) {
+template<typename S>
+void print(S& val) {
     std::cout << val << std::endl;
 }
 

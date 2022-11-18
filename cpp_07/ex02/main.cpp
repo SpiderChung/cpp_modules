@@ -144,9 +144,9 @@ int main() {
         std::cout << "--------------" << std::endl;
 
         Array<std::string> strArray1(3);
-        strArray1[0] = "bo";
-        strArray1[1] = "bu";
-        strArray1[2] = "ba";
+        strArray1[0] = "la";
+        strArray1[1] = "la";
+        strArray1[2] = "land";
 
         std::cout << "array1 = ";
         strArray1.printArray();
